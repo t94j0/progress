@@ -32,9 +32,9 @@ func (p *ProgressTracker) Increment() {
 // print prints the count according to if the Maximum is known or not
 func (p *ProgressTracker) print() {
 	if p.Maximum == -1 {
-		fmt.Printf("\r%s: %d", p.Comment, p.Count)
+		fmt.Printf("%s: %d\r", p.Comment, p.Count)
 	} else {
-		fmt.Printf("\r%s: (%d/%d)", p.Comment, p.Count, p.Maximum)
+		fmt.Printf("\r%s: (%d/%d)\r", p.Comment, p.Count, p.Maximum)
 	}
 }
 
